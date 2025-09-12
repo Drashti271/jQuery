@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <button id="hide" style="font-size: 20px; background-color: black; color: white;">Hide</button>
+        <button id="show" style="font-size: 20px; background-color: black; color: white;">Show</button>
+        <button id="toggler" style="font-size: 20px; background-color: black; color: white;">Toggler</button>
+    </div>
+    <p id="text" style="font-size: 20px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis impedit
+        delectus ullam, facere sint nobis maiores, tempore necessitatibus molestiae error consectetur. Labore qui
+        voluptas at laboriosam illo libero, atque velit.</p>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#hide').on('click', function () {
+                $('#text').fadeOut(1000);
+            });
+            $('#show').on('click', function () {
+                $('#text').fadeIn(1000);
+            });
+            $('#toggler').on('click', function () {
+                $('#text').fadeToggle(1000);
+            });
+        });
+    </script>
+</body>
+
+</html>
