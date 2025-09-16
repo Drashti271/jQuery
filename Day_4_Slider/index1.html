@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Slider  -->
+    <div id="carouselExample" class="carousel slide mt-5">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8="
+                    class="d-block w-100" height="500px" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://thumbs.dreamstime.com/b/scenic-mountain-valley-golden-light-sunrise-landscape-sunlight-bathes-mountainous-as-mist-gently-fills-creating-serene-389749695.jpg"
+                    class="d-block w-100" alt="..." height="500px">
+            </div>
+            <div class="carousel-item">
+                <img src="https://thumbs.dreamstime.com/b/summer-landscape-mountains-19962520.jpg" class="d-block w-100"
+                    alt="..." height="500px">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-slide="prev" id="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-slide="next" id="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#next').click(function () {
+                if ($('.active').next().hasClass('carousel-item')) {
+                    $('.active').removeClass('active').next().addClass('active');
+                } else {
+                    $('.active').removeClass('active').parent().children().first().addClass('active');
+                }
+            });
+
+            $('#prev').click(function () {
+                if ($('.active').prev().hasClass('carousel-item')) {
+                    $('.active').removeClass('active').prev().addClass('active');
+                } else {
+                    $('.active').removeClass('active').parent().children().last().addClass('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

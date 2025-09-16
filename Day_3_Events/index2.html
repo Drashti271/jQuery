@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Mouse Effects -->
+    <div class="container">
+        <div class="row mt-5 justify-content-center">
+            <div class="col-md-6">
+                <p id="text1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae reprehenderit atque,
+                    harum
+                    ipsum distinctio voluptas qui, ullam aliquam ab labore perferendis impedit. Dignissimos libero illum
+                    beatae sit blanditiis magni quos.</p>
+            </div>
+            <div class="col-md-6">
+                <p id="text2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae reprehenderit atque,
+                    harum
+                    ipsum distinctio voluptas qui, ullam aliquam ab labore perferendis impedit. Dignissimos libero illum
+                    beatae sit blanditiis magni quos.</p>
+            </div>
+            <div class="col-md-6">
+                <p id="text3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae reprehenderit atque,
+                    harum
+                    ipsum distinctio voluptas qui, ullam aliquam ab labore perferendis impedit. Dignissimos libero illum
+                    beatae sit blanditiis magni quos.</p>
+            </div>
+            <div class="col-md-6">
+                <p id="text4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae reprehenderit atque,
+                    harum
+                    ipsum distinctio voluptas qui, ullam aliquam ab labore perferendis impedit. Dignissimos libero illum
+                    beatae sit blanditiis magni quos.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Mouse Enter 
+            $('#text1').mouseenter(function () {
+                $(this).css({
+                    fontSize: "20px",
+                    background: "red"
+                });
+            });
+            // Mouse Leave 
+            $('#text2').mouseleave(function () {
+                $(this).css({
+                    fontSize: "30px",
+                    background: "blue"
+                });
+            });
+            // Double Click 
+            $('#text3').dblclick(function () {
+                $(this).css({
+                    background: "black"
+                });
+            });
+            // Click 
+            $('#text4').click(function () {
+                $(this).css({
+                    background: "red"
+                })
+            });
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Key Effects  -->
+    <div class="container">
+        <div class="row mt-5 justify-content-center">
+            <div class="col-md-4">
+                <input type="text" id="email">
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="password">
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="name">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Key Down
+            $('#email').keydown(function () {
+                $(this).css({
+                    'background': 'lightcoral',
+                    'color': 'white',
+                    'border': '2px solid red',
+                    'box-shadow': '0px 0px 8px red',
+                    'transition': 'all 0.2s ease'
+                });
+            });
+            // Key Press 
+            $('#password').keypress(function () {
+                $(this).css({
+                    'background': 'lightgreen',        
+                    'color': 'darkgreen',
+                    'font-style': 'italic',
+                    'border': '2px dashed green',
+                    'transition': 'all 0.2s ease'
+                });
+            });
+            // Key Up 
+            $('#name').keyup(function () {
+                $(this).css({
+                    'background': 'lightblue',
+                    'color': 'darkblue',
+                    'font-weight': 'bold',
+                    'border': '2px solid blue',
+                    'transition': 'all 0.3s ease'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
